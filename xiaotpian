@@ -1,0 +1,7 @@
+<template>
+  <view>
+    <swiper :indicator-dots="false" :autoplay="true" :interval="5000" :circular="true" @change="handleChange" :style="{width: images.length*100 + '%'}">
+      <swiper-item v-for="(image, index) in images" :key="index">
+        <image :src="image" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
